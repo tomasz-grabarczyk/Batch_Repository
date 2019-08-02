@@ -34,7 +34,13 @@ set fullDate=%yearToday%_%monthToday%_%dayToday%
 
 Rem ***** Get yesterday's date *****
 set/a dayYesterday=%dayToday%-1
-set fullDateYesterday=%yearToday%_%monthToday%_%dayYesterday%
+
+Rem ***** If day is less than 10, add 0 before day number *****
+if %dayYesterday% LSS 10 (
+	set fullDateYesterday=%yearToday%_%monthToday%_0%dayYesterday%
+) else  (
+	set fullDateYesterday=%yearToday%_%monthToday%_%dayYesterday%
+)
 
 Rem ***** Set file names *****
 set fileName=AMS_ARDAGH_%fullDate%.xlsm
