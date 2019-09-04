@@ -7,12 +7,12 @@ cd ..\Onedrive - Atos
 
 Rem ***** Open following tabs in Chrome *****
 start Chrome
-start "Remedy" "https://cgorion.onbmc.com/"
-start "ChaRM" "http://ardasmci.ardaghgroup.com:8080/sap/bc/bsp/sap/crm_ui_start/default.htm?sap-client=060&sap-language=EN"
-start "SAP Router" "http://g11as1.informatik.tu-muenchen.de:8011/remotelogin(bD1lbiZjPTEwMQ==)/dremlogin.htm"
+start "Remedy" "Remedy URL"
+start "ChaRM" "ChaRM URL"
+start "SAP Router" "SAP Router URL"
 
 Rem ***** Open VPN in Internet Explorer *****
-start iexplore.exe "https://vpneu.ardaghgroup.com/my.policy"
+start iexplore.exe "VPN URL"
 
 Rem ***** Open Skype (Lync), Outlook, VPN Access and SAP Logon *****
 start /min Lync
