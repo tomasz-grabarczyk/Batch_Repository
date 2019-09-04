@@ -1,9 +1,9 @@
 @echo off
 
 Rem ***** Change directory to Downloads and remove all files and then change directory to Onedrive - Atos *****
-cd ..\..\Downloads
+cd C:\Users\%USERNAME%\Downloads
 del *.* /f /q
-cd ..\Onedrive - Atos
+cd C:\Users\%USERNAME%\OneDrive - Atos
 
 Rem ***** Open following tabs in Chrome *****
 start Chrome
