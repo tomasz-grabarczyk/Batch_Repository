@@ -7,12 +7,12 @@ cd ..\Onedrive - Atos
 
 Rem ***** Open following tabs in Chrome *****
 start Chrome
-start "Remedy" "Remedy url"
-start "ChaRM" "ChaRM url"
-start "SAP Router" "SAPRouter url"
+start "Remedy" "https://cgorion.onbmc.com/"
+start "ChaRM" "http://ardasmci.ardaghgroup.com:8080/sap/bc/bsp/sap/crm_ui_start/default.htm?sap-client=060&sap-language=EN"
+start "SAP Router" "http://g11as1.informatik.tu-muenchen.de:8011/remotelogin(bD1lbiZjPTEwMQ==)/dremlogin.htm"
 
 Rem ***** Open VPN in Internet Explorer *****
-start iexplore.exe "VPN url"
+start iexplore.exe "https://vpneu.ardaghgroup.com/my.policy"
 
 Rem ***** Open Skype (Lync), Outlook, VPN Access and SAP Logon *****
 start /min Lync
@@ -47,9 +47,9 @@ set fileName=AMS_ARDAGH_%fullDate%.xlsm
 set fileNameYesterday=AMS_ARDAGH_%fullDateYesterday%.xlsm
 
 Rem ***** Check if file exists and if not copy file from yesterday *****
-if exist %fileName% (
-	start %fileName%
-) else (
+if not exist %fileName% (
 	copy /y %fileNameYesterday% %fileName%
-	start %fileName%
 )
+
+Rem ***** Open folder with Excel files *****
+explorer C:\Users\%USERNAME%\OneDrive - Atos\AMS_ARDAGH
